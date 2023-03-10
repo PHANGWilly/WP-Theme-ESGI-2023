@@ -5,3 +5,6 @@ Author : Phang Willy ESGI 2023
 Description : Thème pour la classe 1 ESGI 2022-2023
 */
 ?>
+<?php get_header();?>
+    
+<?php get_footer();?>

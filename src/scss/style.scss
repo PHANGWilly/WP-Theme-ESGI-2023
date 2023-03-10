@@ -1,7 +1,10 @@
-@import "vendor/bootstrap-grid";
-@import "vendor/normalize";
-
+@import "partials/fonts";
+@import "partials/headings";
+@import "partials/colors";
 @import "partials/globals";
 
 @import "components/header";
 @import "components/footer";
+
+@import "vendor/bootstrap-grid";
+@import "vendor/normalize";
