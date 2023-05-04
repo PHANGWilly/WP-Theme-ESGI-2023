@@ -11,22 +11,29 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
     <?php wp_body_open(); ?>
-    
-    
+    <!-- START HEADER -->
+        <header id="site-header">
+            <div class="header-container">
+                <div class="menu-mobile">
+                    <button id="mobile-button">
+                        <span class="burger-icon"></span>
+                    </button>
+                </div>
+                <nav class="main-nav">
+                    
+                    <?php 
+                        wp_nav_menu([
+                            'theme_location' => 'header',
+                            'menu_class' => 'list-nav'
+                        ]);
+                    ?>
+                </nav>
+            </div>            
+        </header>
+    <!-- END HEADER -->
+
     <!-- START MAIN CONTENT-->
     <main id="site-content" class="container my-0 mx-auto">
-
-        <!-- START HEADER -->
-        <header id="site-header" class="my-4 d-flex flex-row justify-content-center align-items-center">
-            <nav class="">
-                <?php wp_nav_menu([
-                    'theme_location' => 'header',
-                    'menu_class' => 'd-flex justify-content-center'
-                ])?>
-            </nav>
-            <button class="burger-menu">
-                <img src="<?php echo get_template_directory_uri().'/src/img/burger-icon.svg';?>" alt="">
-            </button>
-        </header>
-        <!-- END HEADER -->
+        <div class="main-container">

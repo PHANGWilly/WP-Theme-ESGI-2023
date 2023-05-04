@@ -3,3 +3,24 @@
     margin : 0;
     box-sizing: border-box;
 }
+  
+html, body{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        grid-template-rows: auto 1fr 40%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+        grid-template-rows: auto 1fr 30%;
+    }
+}
