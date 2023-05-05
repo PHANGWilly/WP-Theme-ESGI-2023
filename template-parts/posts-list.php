@@ -1,30 +1,31 @@
 <?php 
-    $args = array(
-        "post_type" => 'post',
-        "orderby" => 'date',
-        "order" => 'desc',
-        "numberposts" => 6,
-    );
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-    $posts = get_posts($args);
+$args = [
+			'numberposts' => 6,
+            'paged' => $paged
+		];
+$posts = get_posts($args);
+
 ?>
-
+<hr class="separator">
 <section class="posts-list">
-    <ul>
-        <?php 
-            foreach ($posts as $post):?>
-                <li>
-                    <a href="<?= get_permalink( $post->ID);?>">
-                        <span class="post-title">
-                            <?= $post->post_title ;?>
-                        </span>
-                        <time class="post-date">
-                            <?= wp_date('j F Y', strtotime($post->post_date));?>
-                        </time>
+	<ul  class="post-nav">
+		<?php 
+		    foreach ($posts as $post) { ?>
+                <li class="the-post">
+                    <a href="<?= get_permalink($post->ID) ?>"  class="post-article">
+                        <div class="post-article__container">
+                            <span class="post-title"><?= $post->post_title ?></span> 
+                            <time class="post-date">
+                                <?= wp_date('j F Y', strtotime($post->post_date)) ?>
+                            </time>
+                        </div>
                     </a>
                 </li>
-                <?php
-            endforeach;
-        ?>
-    </ul>
+		<?php } ?>
+	</ul>
+    <div class="pagination">
+
+    </div>
 </section>

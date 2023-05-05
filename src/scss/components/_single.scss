@@ -1,0 +1,121 @@
+.single-post{
+    .post-title{
+        text-align: center;
+    }
+    .post-info{
+        display: flex;
+        justify-content: space-between;
+        max-width: 300px;
+        width: 100%;
+        align-items: center;
+        margin: 2rem auto;
+
+        .circle{
+            background-color: $gray-4;
+            border: 1px solid $gray-4;
+            color: $gray-4;
+            overflow: visible;         
+            margin: 0 auto;
+            position: relative;
+
+            &::before{
+                content : "";
+                border: 1px solid $gray-4;
+                background-color: $white;
+                height: 15px;
+                width: 15px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .post-author{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        .post-autor-name{
+            font-family: $Overpass;
+            font-size: 1rem;
+            color : $gray-2;
+        }
+
+        .post-autor-picture{
+            img{
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .post-date{
+        font-family: $Overpass;
+        font-size: 1rem;
+        color : $gray-2;
+    }
+
+    .post-thumbnail{
+        display: block;
+        margin: 2rem 0;
+        img{
+            width: 100%;
+            height: calc(100%/1.777777778);
+        }
+    }
+
+    .post-content{
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: $gray-2;
+        font-family: $Overpass;
+
+        &>*{
+            line-height: 150%;
+        }
+    }
+
+    .sharable{
+        margin: 5rem auto 2rem auto;
+
+        .sharable-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sharable-title{
+            font-family: $Overpass;
+            font-weight: 300;
+            color: $gray-2;
+        }
+
+        .sharable-list{
+            display: flex;
+            gap:1rem;
+
+            .sharable-item{
+                list-style-type: none;
+            }
+
+            .sharable-link{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                padding: .5rem;
+
+                &:hover{
+                    background: $gray-4;
+                }
+            }
+        }
+    }
+}

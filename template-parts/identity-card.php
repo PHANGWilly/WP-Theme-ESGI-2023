@@ -7,12 +7,28 @@
     <h4 class="blog-description"><?= get_bloginfo('description') ?></h4>
     <br>
     <footer class="identity-card__footer">
-		<nav>
-			<ul>
-				<li><a href="#"><?= getIcon('twitter'); ?></a></li>
-				<li><a href="#"><?= getIcon('facebook'); ?></a></li>
-				<li><a href="#"><?= getIcon('google'); ?></a></li>
-				<li><a href="#"><?= getIcon('linkedin'); ?></a></li>
+		<nav class="identity-card-nav">
+			<ul class="identity-card-list">
+				<li class="identity-card-item">
+					<a href="#" class="identity-card-link">
+						<?= getIcon('twitter'); ?>
+					</a>
+				</li>
+				<li class="identity-card-item">
+					<a href="#" class="identity-card-link">
+						<?= getIcon('facebook'); ?>
+					</a>
+				</li>
+				<li class="identity-card-item">
+					<a href="#" class="identity-card-link">
+						<?= getIcon('google'); ?>
+					</a>
+				</li>
+				<li class="identity-card-item">
+					<a href="#" class="identity-card-link">
+						<?= getIcon('linkedin'); ?>
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</footer>	

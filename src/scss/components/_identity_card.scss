@@ -1,4 +1,5 @@
 .identity-card{
+    margin : 2rem 0;
     .custom-logo-link{
         display: flex;
         align-items: center;
@@ -25,17 +26,26 @@
     }
 
     .identity-card__footer{
-        nav{
-            ul{
+        .identity-card-list{
+            display: flex;
+            gap:1rem;
+            justify-content: center;
+            
+            .identity-card-item{
+                list-style-type: none;
+            }
+
+            .identity-card-link{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 2rem;
+                border-radius: 50%;
+                padding: .5rem;
 
-                li{
-                    list-style-type: none;
+                &:hover{
+                    background: $gray-4;
                 }
             }
-       }
+        }
     }
 }

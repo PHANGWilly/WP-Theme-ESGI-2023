@@ -1,5 +1,5 @@
 #site-content{
-    padding: 1rem;
+    padding: 1rem 0;
     width: 100%;
     margin: 0 auto;
 }
@@ -10,12 +10,12 @@
 
 @media screen and (min-width: 1024px) {
     #site-content{
-        max-width: 600px;
+        max-width: 556px;
     }
 }
 
 @media screen and (max-width:1024px) {
     #site-content{
-        max-width: 300px;
+        max-width: 330px;
     }
 }

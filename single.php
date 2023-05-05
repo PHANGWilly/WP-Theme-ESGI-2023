@@ -8,7 +8,7 @@
                     <?= get_avatar($post->post_author); ?>
                 </div>
                 <span class="post-autor-name">
-                    <?= $post->post_author; ?>
+                    <?= get_the_author_meta('display_name', $post->post_author);?>
                 </span>
             </div>
             <span class="circle"></span>
@@ -16,10 +16,39 @@
                 <?= wp_date('j F Y', strtotime($post->post_date));?>
             </div>
         </div>
-        <?= get_the_post_thumbnail() ?>
+        <div class="post-thumbnail">
+		    <?= get_the_post_thumbnail() ?>
+        </div>
         <br>
         <div class="post-content">
-            <?= $post->post_content;?>
+            <?php the_content() ?>
+        </div>
+        <div class="sharable">
+            <div class="sharable-container">
+                <span class="sharable-title">Partager :</span>
+                <ul class="sharable-list">
+                    <li class="sharable-item">
+                        <a href="#" class="sharable-link">
+                            <?= getIcon('twitter'); ?>
+                        </a>
+                    </li>
+                    <li class="sharable-item">
+                        <a href="#" class="sharable-link">
+                            <?= getIcon('facebook'); ?>
+                        </a>
+                    </li>
+                    <li class="sharable-item">
+                        <a href="#" class="sharable-link">
+                            <?= getIcon('google'); ?>
+                        </a>
+                    </li>
+                    <li class="sharable-item">
+                        <a href="#" class="sharable-link">
+                            <?= getIcon('linkedin'); ?>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 <?php get_footer(); ?>

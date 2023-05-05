@@ -10,6 +10,7 @@
         add_theme_support( 'title-tag');
         register_nav_menu( 'header', 'En tête du menu' );
         add_theme_support( 'custom-logo' );
+        add_theme_support( 'post-thumbnails' );
     }
 
     
